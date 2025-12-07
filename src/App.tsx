@@ -30,44 +30,38 @@ function App() {
           </button>
           <div className={`nav-menu ${menuOpen ? 'active' : ''}`}>
             <button className="nav-link" onClick={() => scrollToSection('home')}>Home</button>
+            <button className="nav-link" onClick={() => scrollToSection('produce')}>Our Products</button>
             <button className="nav-link" onClick={() => scrollToSection('about')}>About</button>
-            <button className="nav-link" onClick={() => scrollToSection('produce')}>Fresh Produce</button>
             <button className="nav-link" onClick={() => scrollToSection('contact')}>Location & Hours</button>
           </div>
         </div>
       </nav>
 
       <main>
-        <section id="home" className="hero">
+        <section
+          id="home"
+          className="hero"
+          style={{
+            backgroundImage: 'url(/images/thegang.jpg)'
+          }}
+        >
           <div className="hero-content">
-            <h1 className="hero-title">Tiwahe Produce</h1>
             <p className="hero-subtitle">Fresh • Local • Community Strong</p>
-            <p className="hero-description">
+          </div>
+        </section>
+
+        <section className="intro-section">
+          <div className="container">
+            <p className="intro-text">
               Supporting our community with fresh, locally grown produce.
               Tiwahe means "family" and "community strong" - that's who we are.
             </p>
           </div>
         </section>
 
-        <section id="about" className="section">
-          <div className="container">
-            <h2>About Us</h2>
-            <p>
-              We're young entrepreneurs passionate about bringing fresh, quality produce
-              to our community. Located right here in Fort White, we're your neighbors
-              committed to serving you the best fruits and vegetables we can grow and source.
-            </p>
-            <p>
-              <strong>Tiwahe</strong> is a Native American word meaning "family" and "community strong."
-              That's the foundation of everything we do - building stronger community connections
-              through fresh, healthy food.
-            </p>
-          </div>
-        </section>
-
         <section id="produce" className="section">
           <div className="container">
-            <h2>Fresh Produce</h2>
+            <h2>Our Products</h2>
             <div className="produce-grid">
               <div className="produce-item">
                 <h3>🍅 Fresh Tomatoes</h3>
@@ -90,12 +84,28 @@ function App() {
                 <p>Strawberries, melons, and local favorites</p>
               </div>
               <div className="produce-item">
-                <h3>🥕 Root Vegetables</h3>
-                <p>Carrots, potatoes, and seasonal varieties</p>
+                <h3>🍯 Local Honey</h3>
+                <p>Pure, natural honey from our area</p>
               </div>
             </div>
             <p className="produce-note">
               <em>Selection varies by season. Visit us to see what's fresh today!</em>
+            </p>
+          </div>
+        </section>
+
+        <section id="about" className="section">
+          <div className="container">
+            <h2>About Us</h2>
+            <p>
+              We're young entrepreneurs passionate about bringing fresh, quality produce
+              to our community. Located right here in Fort White, we're your neighbors
+              committed to serving you the best fruits and vegetables we can grow and source.
+            </p>
+            <p>
+              <strong>Tiwahe</strong> is a Native American word meaning "family" and "community strong."
+              That's the foundation of everything we do - building stronger community connections
+              through fresh, healthy food.
             </p>
           </div>
         </section>

@@ -16,6 +16,8 @@ body {
 
 .App {
   min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* Navigation */
@@ -25,7 +27,10 @@ body {
   padding: 0;
   position: fixed;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
+  max-width: 1000px;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -123,11 +128,13 @@ main {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #4a7c59 0%, #5d8a66 100%);
-  color: white;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  color: black;
   padding: 4rem 1rem;
   text-align: center;
-  min-height: 60vh;
+  min-height: calc(60vh + 100px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,6 +142,22 @@ main {
 
 .hero-content {
   max-width: 600px;
+  margin-top: 200px;
+}
+
+.hero .hero-subtitle {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 1.5rem;
+  opacity: 1;
+  white-space: nowrap;
+}
+
+.hero .hero-description {
+  font-size: 1.5rem !important;
+  font-weight: 500 !important;
+  opacity: 1 !important;
+  line-height: 1.6;
 }
 
 .hero-title {
@@ -143,22 +166,27 @@ main {
   font-weight: bold;
 }
 
-.hero-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  opacity: 0.9;
-  font-weight: 300;
+
+
+/* Intro Section */
+.intro-section {
+  padding: 2rem 1rem 1rem 1rem;
+  background-color: white;
+  text-align: center;
 }
 
-.hero-description {
-  font-size: 1rem;
-  opacity: 0.8;
+.intro-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #2c5530;
+  max-width: 800px;
+  margin: 0 auto;
   line-height: 1.6;
 }
 
 /* Sections */
 .section {
-  padding: 3rem 1rem;
+  padding: 1.5rem 1rem;
 }
 
 .section:nth-child(even) {
@@ -264,6 +292,14 @@ main {
   margin: 0;
 }
 
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .hero .hero-subtitle {
+    white-space: normal !important;
+    font-size: 1.8rem !important;
+  }
+}
+
 /* Desktop Styles */
 @media (min-width: 768px) {
   .nav-toggle {
@@ -288,10 +324,6 @@ main {
 
   .hero-title {
     font-size: 3.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.5rem;
   }
 
   .produce-grid {
